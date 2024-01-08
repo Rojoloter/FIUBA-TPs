@@ -7,4 +7,4 @@
 
 - [TP2 - AlgoPaint](https://algoritmos1rw.ddns.net/tps/2023-c1/tp2): Implementación de un programa similar a Paint, que permite dibujar sobre un lienzo, y guardar/cargar imagenes.
 
-- [TP3 - ALGOPAINT++](https://algoritmos1rw.ddns.net/tps/2023-c1/tp3): Al programa del TP2, se le agrega las funcionalidades de "balde de pintura" y deshacer/rehacer.
+- [TP3 - AlgoPaint++](https://algoritmos1rw.ddns.net/tps/2023-c1/tp3): Al programa del TP2, se le agrega las funcionalidades de "balde de pintura" y deshacer/rehacer.
