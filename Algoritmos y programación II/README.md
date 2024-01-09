@@ -19,9 +19,9 @@
 
 - TP2: La consigna del TP2 era la de simular una red social que dado un archivo de usuarios ya creados, permitiera loggearse, desloggearse, publicar posteos, y ver y likear posts de otros usuarios. Para esto utilizabamos las implementaciones hechas hasta ahora. 
 
-- TP3: Este trabajo requería la implementacion de un grafoy y una biblioteca genérica de funciones para grafos. Luego, usando varios articulos de wikipedia (al rededor de 75k) se debían implementar ciertas funciones que permitieran navegar entre los artículos. Están implementados:
+- TP3: Este trabajo requería la implementacion de un grafo y una biblioteca genérica de funciones para grafos. Luego, usando varios articulos de wikipedia (al rededor de 75k) se debían implementar ciertas funciones que permitieran navegar entre los artículos. Están implementados:
   - una función que calcula el camino mínimo que se debe recorrer entre dos artículos, imprimendo el camino de artículos a seguir.
-  - una función que imprime la cantidad de artículos que se encuentran a X distancia.
+  - una función que imprime la cantidad de artículos que se encuentran a X distancia del artículo original.
   - una función que imprime la mayor distancia entre todos los pares de articulos disponibles, en otras palabras, el diametro del grafo.
   - una función que, dado un artículo origen, imprime el camino que se forma al seguir el primer link disponible de cada artículo, con un límite de 21 artículos.
   - una función que calcula el coeficiente de clustering de los artículos (grafo)
