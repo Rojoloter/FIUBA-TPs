@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<main class="detalle-vol container-fluid d-flex justify-content-center my-4">
+  <div class="col-lg-6 col-10 d-flex flex-column">
+    <div class="refugio_header d-flex justify-content-between w-100 pr-4 mb-3">
+      <h1>Refugio: {{refugio['nombre_refugio']}}</h1>
+      <a href="{{url_for('mapa')}}" target="_blank">
+        <button class="px-3 py-2 rounded border border-primary bg-primary text-white">¿Cómo ir?</button>
+      </a>
+      <a href="{{url_for('edicion_refugio', id=refugio['id_refugio'])}}" target="_blank">
+        <button class="px-3 py-2 rounded border border-primary bg-primary text-white">Editar</button>
+      </a>
+    </div>
+    <h3>{{refugio['descripcion']}}
+    </h3>
+    <section class="w-100 mb-4">
+      <img class="img-fluid img-thumbnail" src="{{refugio['link_foto']}}" alt="Imagen del Refugio"
+        style="width: 100%; height: auto; border-radius: 4px;" />
+    </section>
+    <p class="m-0 mb-2" style="font-size: 18px; color: black;">
+      Tipo de refugio: {{refugio['tipo_refugio']}}</p>
+    <h4 style="font-size: 18px;">Contacto:</h4>
+    <ul class="pl-3" style="font-size: 18px; color: black;">
+      <li>Teléfono: {{refugio['telefono']}}</li>
+      <li>Dirección: {{refugio['direccion']}}</li>
+      <h4 style="font-size: 18px;">Voluntarios:</h4>
+      <ul class="ml-4">
+        {% for voluntario in voluntarios %}
+        <li><a href="{{url_for('detalles_voluntario', cuil=voluntario[0])}}">{{voluntario[3]}}, {{voluntario[1]}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </ul>
+  </div>
+</main>
+{% endblock %}

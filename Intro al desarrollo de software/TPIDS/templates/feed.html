@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form class="searchbar" action="{{ url_for('feed') }}" method="post">
+    <div class="search">
+        <label for="search_input">
+            <input placeholder="Buscar refugio o tipo de refugio" type="text" id="search_input" name="fsearch_input" class="input">
+        </label>
+            <button type="submit">Ir</button>
+  </div>
+</form>
+
+<h1 class="titulo mb-2">REFUGIOS</h1>
+{% for refugio in refugios %}
+<div class="container-fluid d-flex justify-content-center mb-5">
+  <a href="{{url_for('detalles_refugio', id=refugio['id'])}}" style="text-decoration: none; color: inherit;">
+    <div class="card">
+      <img src="{{refugio['foto']}}" alt="Imagen refugio">
+      <div class="card__content">
+        <p class="card__title">{{refugio['nombre']}}</p>
+        <p class="card__subtitle">{{refugio['direccion']}}</p>
+        <p class="card__description">{{refugio['descripcion']}}</p>
+        <p>Tipo de refugio: {{refugio['tipo']}}</p>
+        <p>Teléfono: {{refugio['telefono']}}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+{% endblock %}
+
+
